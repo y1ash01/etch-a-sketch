@@ -45,5 +45,11 @@ document.querySelector('.clear').addEventListener('click',()=>{clear()});
 document.querySelector('.draw').addEventListener('click',()=>{mode = 'draw'});
 document.querySelector('.divs').addEventListener('click',()=>{
     const input = prompt('Enter the grid size');
+    if(input <0 ){
+        input = 0;
+    }
+    else if(input>100){
+        input = 100;
+    }
     add_divs(input);
 });
